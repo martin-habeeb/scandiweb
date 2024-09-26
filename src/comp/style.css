@@ -1,0 +1,462 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #DFF5FF;
+
+}
+
+header{
+    background-color: #3A6D8C;
+    padding: 30px 40px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+ header .logo h1{
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 32px;
+}
+
+ .d-flex{
+    display: flex;
+}
+
+.header .btns .row{
+    margin-right: 20px;
+    list-style: none;
+}
+.ui-btn {
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    border-style: solid;
+    background-color: transparent;
+    border-color: rgb(219, 218, 218);
+    height: 40px;
+    transition: 0.2s ease;
+    text-transform: uppercase;
+    border-width: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.ui-btn a{
+    padding: 1px ;
+}
+.ui-btn:hover {
+    color: rgb(247, 247, 247);
+    background-color: rgb(202, 25, 25);
+    border-color: rgb(202, 25, 25);
+    text-shadow: 0 0 50px white, 0 0 20px white, 0 0 15px white;
+    box-shadow: 0 0 50px rgb(202, 25, 25), 0 0 30px rgb(202, 25, 25),
+    0 0 60px rgb(202, 25, 25), 0 0 120px rgb(202, 25, 25);
+    font-size: 20px;
+    height: 50px;
+    letter-spacing: 3px;
+}
+.ui-btn:active {
+    height: 38px;
+    letter-spacing: 1px;
+}
+
+
+.add-btn {
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    border-style: solid;
+    background-color: transparent;
+    border-color: rgb(219, 218, 218);
+    height: 40px;
+    transition: 0.2s ease;
+    text-transform: uppercase;
+    border-width: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.add-btn a{
+    padding: 1px ;
+}
+.add-btn:hover {
+    color: rgb(247, 247, 247);
+    background-color: rgb(25, 66, 202);
+    border-color: rgb(25, 54, 202);
+    text-shadow: 0 0 50px white, 0 0 20px white, 0 0 15px white;
+    box-shadow: 0 0 50px rgb(25, 34, 202), 0 0 30px rgb(25, 66, 202),
+    0 0 60px rgb(25, 28, 202), 0 0 120px rgb(25, 81, 202);
+    font-size: 20px;
+    height: 50px;
+    letter-spacing: 3px;
+}
+.add-btn:active {
+    height: 38px;
+    letter-spacing: 1px;
+}
+
+
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 10px 20px;
+}
+
+.box{
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    margin-top: 20px;
+    background: rgba(0, 31, 63, 0.87);
+    padding: 15px 20px;
+    border-radius: 20px;
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+    .delete-checkbox input[type=checkbox] {
+        --active: #275EFE;
+        --active-inner: #fff;
+        --focus: 2px rgba(39, 94, 254, .3);
+        --border: #BBC1E1;
+        --border-hover: #275EFE;
+        --background: #fff;
+        --disabled: #F6F8FF;
+        --disabled-inner: #E1E6F9;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        height: 21px;
+        outline: none;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        margin: 0;
+        cursor: pointer;
+        border: 1px solid var(--bc, var(--border));
+        background: var(--b, var(--background));
+        transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    }
+
+    .delete-checkbox input[type=checkbox]:after {
+        content: "";
+        display: block;
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+
+    .delete-checkbox input[type=checkbox]:after {
+        transition: transform 0.3s var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+    }
+
+    .delete-checkbox input[type=checkbox]:checked {
+        --b: var(--active);
+        --bc: var(--active);
+        --d-o: .3s;
+        --d-t: .6s;
+        --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+    }
+
+    .delete-checkbox input[type=checkbox]:disabled {
+        --b: var(--disabled);
+        cursor: not-allowed;
+        opacity: 0.9;
+    }
+
+    .delete-checkbox input[type=checkbox]:disabled:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--border);
+    }
+
+    .delete-checkbox input[type=checkbox]:disabled + label {
+        cursor: not-allowed;
+    }
+
+    .delete-checkbox input[type=checkbox]:hover:not(:checked):not(:disabled) {
+        --bc: var(--border-hover);
+    }
+
+    .delete-checkbox input[type=checkbox]:focus {
+        box-shadow: 0 0 0 var(--focus);
+    }
+
+    .delete-checkbox input[type=checkbox]:not(.switch) {
+        width: 21px;
+    }
+
+    .delete-checkbox input[type=checkbox]:not(.switch):after {
+        opacity: var(--o, 0);
+    }
+
+    .delete-checkbox input[type=checkbox]:not(.switch):checked {
+        --o: 1;
+    }
+
+    .delete-checkbox input[type=checkbox] + label {
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-left: 4px;
+    }
+
+    .delete-checkbox input[type=checkbox]:not(.switch) {
+        border-radius: 7px;
+    }
+
+    .delete-checkbox input[type=checkbox]:not(.switch):after {
+        width: 5px;
+        height: 9px;
+        border: 2px solid var(--active-inner);
+        border-top: 0;
+        border-left: 0;
+        left: 7px;
+        top: 4px;
+        transform: rotate(var(--r, 20deg));
+    }
+
+    .delete-checkbox input[type=checkbox]:not(.switch):checked {
+        --r: 43deg;
+    }
+}
+
+.delete-checkbox * {
+    box-sizing: inherit;
+}
+
+.delete-checkbox *:before,
+.delete-checkbox *:after {
+    box-sizing: inherit;
+}
+
+.detail h3{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    height: 40px;
+}
+
+/*Footer*/
+.footer{
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    height: 70px;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    padding: 15px 20px;
+    background-color: #6A9AB0;
+}
+
+
+/*Footer*/
+.foter{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    padding: 15px 20px;
+    background-color: #6A9AB0;
+}
+
+@media only screen and (min-height: 755px) {
+    .footer{
+        position: absolute ;
+
+    }
+}
+
+.footer h1{
+    color: white;
+}
+
+hr{
+    width: 95%;
+    border: 0 none;
+    background: #1a1a1a;
+    height:2px;
+    margin: auto;
+
+}
+
+.product_form{
+    display:flex;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    height: 90vh;
+}
+
+ .inputs {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+     padding: 15px;
+}
+
+input{
+    border-radius: 5px;
+    border: none;
+    box-shadow: inset 2px 5px 10px rgb(89, 89, 89);
+    font-size: 25px;
+    margin: 0 10px;
+    height: 35px;
+}
+
+label h2{
+    display: inline;
+    padding: 20px;
+    font-size: 25px;
+}
+.switcher {
+    width: 170px;
+    height: 30px;
+    color: #DFF5FF;
+    background-color: #3A6D8C;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn {
+    --fancy-button-gradient-0: #8d49fd;
+    --fancy-button-gradient-50: #7f56f3;
+    --fancy-button-gradient-100: #5691f3;
+    --fancy-button-inner-shadow-top: rgba(233, 209, 255, 0.2);
+    --fancy-button-inner-shadow-top-lg: rgba(9, 12, 60, 0.1);
+    --fancy-button-inner-shadow-bottom: rgba(137, 222, 246, 0.3);
+    --fancy-button-shine-top: #e9d1ff;
+    --fancy-button-shine-bottom: #adfff9;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    text-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    margin: 0;
+    appearance: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 25px;
+    color: #fff;
+    background-image: linear-gradient(
+            to bottom,
+            var(--fancy-button-gradient-0) 0%,
+            var(--fancy-button-gradient-50) 50%,
+            var(--fancy-button-gradient-100) 100%
+    );
+    box-shadow:
+            0px 4px 12px rgba(9, 12, 60, 0.15),
+            0px 2px 8px rgba(9, 12, 60, 0.15),
+            0px 1px 3px var(--fancy-button-inner-shadow-top-lg),
+            inset 0px 1px 1px var(--fancy-button-inner-shadow-top),
+            inset 0px -1px 3px var(--fancy-button-inner-shadow-bottom);
+}
+
+.btn:before,
+.btn:after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    will-change: transform;
+}
+
+.btn:before {
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--fancy-button-shine-top);
+    width: 96px;
+    height: 6px;
+    top: -3px;
+    opacity: 0.6;
+    filter: blur(6px);
+    transition: opacity 0.25s;
+}
+
+.btn:after {
+    inset: 0;
+    background-size: cover;
+    z-index: 2;
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+.btn span {
+    display: block;
+    padding: 12px 24px;
+    border-radius: inherit;
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(
+            to bottom,
+            var(--fancy-button-shine-top),
+            transparent 8px
+    );
+    background-position: 0 -6px;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.btn span:before,
+.btn span:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: var(--fancy-button-shine-bottom);
+    transition:
+            opacity 0.25s,
+            transform 0.25s;
+    will-change: transform;
+}
+
+.btn span:before {
+    width: 92px;
+    height: 8px;
+    bottom: -4px;
+    opacity: 0.75;
+    filter: blur(6px);
+}
+
+.btn span:after {
+    width: 112px;
+    height: 1px;
+    bottom: 0;
+    opacity: 0.9;
+    filter: blur(1px);
+}
+
+.btn:hover span:before {
+    opacity: 0.8;
+}
+
+.btn:hover span:before {
+    transform: translateX(-50%) scale(1.25);
+}
+
+.btn:hover span:after {
+    opacity: 1;
+}
