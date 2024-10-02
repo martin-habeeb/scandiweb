@@ -33,11 +33,12 @@ const Add = () => {
                             <h2>Type Switcher </h2>
                             <select id="productType" className="switcher">
                                 <option value="">Select One</option>
-                                <option value="dvd">DVD (Size)</option>
-                                <option value="furniture">Furniture (Dimensions)</option>
-                                <option value="book">Book (Weight)</option>
+                                <option value="dvd" id="DVD">DVD (Size)</option>
+                                <option value="furniture"  id="Furniture">Furniture (Dimensions)</option>
+                                <option value="book" id="Book">Book (Weight)</option>
                             </select>
                         </label>
+
                 </form>
             </main>
 
